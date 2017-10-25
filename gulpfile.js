@@ -50,9 +50,10 @@ gulp.task('img', function() {
 		.pipe(cache(imagemin({
 			interlaced: true,
 			progressive: true,
+            optimizationLevel: 5,
 			svgoPlugins: [{removeViewBox: false}],
 			use: [pngquant()]
-		})))
+        })))
     .pipe(gulp.dest('_site/assets/img'))
     .pipe(browserSync.reload({stream:true}));
 });

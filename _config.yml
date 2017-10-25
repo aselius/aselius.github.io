@@ -1,3 +1,4 @@
+# site settings
 title: Playground for Jaewoo
 description: > # this means to ignore newlines until "baseurl:"
   This is a blog and a personal page for Jaewoo Park. I'm a developer
@@ -12,13 +13,12 @@ author: Jaewoo Park # add your name
 author-img: placeholder.jpg # add your photo
 about-author: I am a developer/engineer with interests in data science, full stack development, and healthcare. # add description
 twitter: jwupark # add your Twitter handle
-facebook: # add your Facebook handle
 github: aselius # add your Github handle
 linkedin: jaewoopark91 # add your Linkedin handle
 email: jaewoopark91@gmail.com # add your Email address
 
 # Disqus
-discus-identifier: jaewoopark # add your discus identifier
+discus-identifier: jaewoopark91 # add your discus identifier
 
 # Tracker
 analytics: UA-108429238-1 # Google Analytics

@@ -1,0 +1,33 @@
+---
+layout: post
+title: About Me
+date: 1991-11-22 01:00:00 -0800
+description: About me as a software engineer, data scientist, and biomedical engineer professionally. Also about my lifestyle, and various topics about my enthusiasm for the video game industry, animation industry, travelling, and seredipitous discovery. # Add post description (optional)
+img: about-me.jpg # Add image post (optional)
+tags: [About Me, General]
+---
+>This is an ongoing document that is being continuously edited. (And yes, that is my head in the picture.)
+
+# About me
+
+**Okay, this may be the most interesting page on my blog. This page holistically explains the type of person I am, so if you stop in the middle and arrive at a different conclusion, well, that’s not my fault. XD**
+
+My name is Jaewoo Park, and I’m a bay area implant currently residing somewhere in the East Bay, CA. I currently work as a Software Engineer for a large telecommunications company, and am focused on virtualization and infrastructure as a service. (Insert Cloud buzzwords here). I’ve been in tech for roughly over a year now, but have been coding (without realizing) for quite the while.
+
+*Topics that fascinate me: Data Science, Health IT, Automation, Autonomous Vehicles, Surgical Robots.*
+
+## For those who knew me in college
+
+I was originally trained to be a Biomedical Engineer in college. After struggling through various engineering disciplines for the degree (mechanical, electrical, chemical, material sci, computational math), I was a little disillusioned.
+
+The long process that is required to get a product out into the market bedazzled me. Getting a medical device out requires a battle of tug-o-war with the FDA, which wasn’t in my DNA.
+The bells and whistles of getting into the industry was belaboring. It seemed close to impossible to make it into the industry without much knowledge of working with such regulatory agencies unless you were a fresh graduate from a target school (Mind you I went to a pretty prestigious engineering heavy school).
+It seemed that you are much more awarded for mechanical and electrical savviness, not so much tech savviness. I was always more inclined to working on a script, or an application on my laptop rather than tinkering around with something in the engineering “design kitchen” we had.
+
+After a couple of conversational interviews during my short lived Senior year, and graduate student years with professionals in the industry, it seemed apparent that I should shift my focus in tech.
+
+## Was I a complete newbie?
+
+Well, so when I decided that I would change industries, was I just completely clueless about everything? Yes, and no.
+
+>If you were looking for my professional experience, go [here](https://www.linkedin.com/in/jaewoopark91); if you were looking for my resume, go [here](http://google.com)
