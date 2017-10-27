@@ -22,8 +22,8 @@ Fork the ``master`` branch and delete ``gh-pages`` branch in it. This is importa
 
 - Create sub links that will change views from default (writing) to others
 - Hamburger for dropdown of these sublinks
-~~- Import over content from wordpress~~
-~~- Delete rest of placeholders for personal content~~
+- ~~Import over content from wordpress~~
+- ~~Delete rest of placeholders for personal content~~
 
 ### License
 
