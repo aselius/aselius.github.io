@@ -10,8 +10,8 @@ url: "http://jaewoopark.io" # the base hostname & protocol for your site, e.g. h
 
 # Author Settings
 author: Jaewoo Park # add your name
-author-img: placeholder.jpg # add your photo
-about-author: I am a developer/engineer with interests in data science, full stack development, and healthcare. # add description
+author-img: me.jpg # add your photo
+about-author: I am a Cloud Engineer in my day job, with a background in BME, and a heap of interests in Data Science, Autonomous Cars, Robotics, and Health IT. # add description
 twitter: jwupark # add your Twitter handle
 github: aselius # add your Github handle
 linkedin: jaewoopark91 # add your Linkedin handle

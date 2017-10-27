@@ -6,6 +6,8 @@ description: About me as a software engineer, data scientist, and biomedical eng
 img: about-me.jpg # Add image post (optional)
 tags: [About Me, General]
 ---
+>TLDR; (or tlrt;) I am currently a Cloud Software Engineer in my day job (no, I don't work for the rainforest company), with a background in Biomedical Engineering, with a heap of interests in Autonomous Cars, Robotics, and Health IT.
+
 >This is an ongoing document that is being continuously edited. (And yes, that is my head in the picture.)
 
 # About me
