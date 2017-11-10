@@ -35,6 +35,8 @@ We are starting at Node S (Start), and want to get to Node E (End). How would we
 
 Dijkstra is similar to a brute force method, but is guided somewhat with a priority queue. It makes use of an order that makes most sense based on how costly a path is. Let’s bring out a table to illustrate how.
 
+---
+
 | Node  | *Cost*   | Goes Through |
 |------ |:------:|--------------|
 | S     |   *0*    |  S |
@@ -42,11 +44,15 @@ Dijkstra is similar to a brute force method, but is guided somewhat with a prior
 | B     |   *Inf*  | - |
 | ...   |   *...*  | - |
 
+---
+
 So we start off by listing all the nodes in the table. The starting node S gets a 0 cost (or distance) since it is the starting point, all the while, the other nodes will get a cost of infinity since we have not reached that node yet and it is uncertain. So with this we look at what connections S has. We also take note of where the last node it traversed through is. This is important in updating the cost should another path have a lower cost to that specific node.
 
 ![Path From S]({{site.baseurl}}/assets/img/path_planning/path_from_s.png)
 
 So we can randomly choose one. For convenience’s sake, let us start alphabetically with A. S-A has a cost of 7, and this is lower than the Infinite cost we have assigned. So we update the table. Likewise, for the rest of the connections S has, (B and C), the table can be updated as following.
+
+---
 
 **To put the first pathway S-A on the priority queue,**
 
@@ -56,6 +62,8 @@ So we can randomly choose one. For convenience’s sake, let us start alphabetic
 |  A  |  *7*  |  S           |
 |  B  | *Inf* |  -           |
 | ... | *...* | ...          |
+
+---
 
 **Putting all the pathways S-A, S-B, S-C in the priority queue,**
 
@@ -68,11 +76,15 @@ So we can randomly choose one. For convenience’s sake, let us start alphabetic
 |  D  | *Inf* |    -         |
 | ... | *...* |   ...        |
 
+---
+
 You can notice that this priority queue organizes the rows by the lowest cost. Now that we’ve exhausted all the connections S has, we can go ahead and pop S out of the queue. After which we pick the next lowest cost Node, which in this case is B.
 
 ![Path From B]({{site.baseurl}}/assets/img/path_planning/path_from_b.png)
 
 The connections B has is as follows. But since we are just coming from S, we ignore that route back to S. We are left with A, D, H. Retracing what we did for the nodes connected to S, we get the following.
+
+---
 
 **Putting the pathway B-A in the priority queue,**
 
@@ -83,6 +95,8 @@ The connections B has is as follows. But since we are just coming from S, we ign
 |  A  | *2+3* |  B  |
 |  D  | *Inf* |  -  |
 | ... | *...* | ... |
+
+---
 
 **For B-D pathway,**
 
@@ -95,6 +109,8 @@ The connections B has is as follows. But since we are just coming from S, we ign
 |  H  | *Inf* |  -  |
 | ... | *...* | ... |
 
+---
+
 **For B-H pathway,**
 
 | Node| *Cost*| Goes through |
@@ -106,9 +122,13 @@ The connections B has is as follows. But since we are just coming from S, we ign
 |  H  | *2+1* |  B  |
 | ... | *...* | ... |
 
+---
+
 Notice the B-A connection. Since the cost of getting to A from the start point is higher at 7 than going through B, we can update A with a lower cost of 5 (3 from B + 2 to B from S). We proceed with the other nodes connected to B, and we pop B out since there aren’t any connections left. Oof, now let’s speed this up. 
 
 The next up is H or C. At first sight, it seems like it will take less time if it picks H since, the only node H is connected to is G, which is only connected to E right? Not quite. Remember how we are choosing the next row up in the priority queue? Since the shortest distance is 7 (yes, let’s cheat a little), you will have to exhaust all the other nodes that have a value under 7 in order for the algorithm to finish. Recall that we want to confirm that the path we have chosen is actually the shortest path, and we didn’t miss a path that was shorter. You can only confirm this if E rises to the top of the priority queue. If it is down below, the algorithm persists. So the first time you see E with a cost that is not infinite, the table will look something like this.
+
+---
 
 | Node| *Cost*| Goes through | *Popped?* |
 |-----|-----|--------------|---------|
@@ -123,6 +143,8 @@ The next up is H or C. At first sight, it seems like it will take less time if i
 |  E  |  *7*  |  G  |   *No*  |
 |  I  |  *9*  |  L  |   *No*  |
 |  J  |  *9*  |  L  |   *No*  |
+
+---
 
 Ah, we have arrived at E, but we still have to go through D and F, and proceed to the connections linked to D and F before E rises to the top of the queue.
 
