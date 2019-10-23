@@ -2,7 +2,7 @@
 layout: post
 title: Maze Solving, Path Finding, and Satellite Navigation - Part 1-
 date: 2017-11-09 22:53:20 -0800
-description: This post deals with explaining the introduction to path planning, maze solving, and potentially how satellite navigation works. Part 1 of a 2 part series, focuses on explaining what you need to consider in path planning, the Dijkstra Algorithm, and the problem that arises with Dijkstra.
+description: This post deals with explaining the introduction to path planning, maze solving, and potentially how satellite navigation works. Part 1 of a 3 part series, focuses on explaining what you need to consider in path planning, the Dijkstra Algorithm, and the problem that arises with Dijkstra.
 img: path_planning/neural_net.jpg # Add image post (optional)
 tags: [Tech, Graph Theory, Path Planning, Self Driving Cars]
 ---
@@ -12,7 +12,7 @@ If you talk to me every now and then, you would probably know that my latest cra
 
 ## What is Path Finding?
 
-Pathfinding is related to the shortest path problem in graph theory, and it boils down into finding the shortest route between two nodes. It is used in various realms of computer science, with one being (an interesting application I thought), finding out what the most optimal path is in a network to limit latency, and another being satelite navigation. 
+Pathfinding is related to the shortest path problem in graph theory, and it boils down into finding the shortest route between two nodes. It is used in various realms of computer science, with one being (an interesting application I thought), finding out what the most optimal path is in a network to limit latency, and another being satelite navigation.
 
 >### How does Satellite Navigation work?
 >An aside on satellite navigation. Satellites are in essence a timer circulating around the orbit, which broadcasts time 24/7. Since the satellites broadcast time in radio waves, when you receive the signal, the receiver can figure out how far away it is from that satellite. So with this, by getting multiple satellites to broadcast the time, we can look at where they intersect to get an understanding of where we currently are in terms of our position on earth. I digress. Back to Pathfinding.
@@ -21,7 +21,7 @@ Pathfinding is related to the shortest path problem in graph theory, and it boil
 
 There are two sides to the path finding problem. The first being, finding where you are, and the second being getting from the beginning location to the destination location. So say you have a rough understanding of where you are using the GPS location. Now, how do you get from the start point to the end point? We should look at a couple of algorithms that can help us achieve that cause.
 
-The most common method of solving this problem is with Dijkstra’s algorithm, and we will start off with this. If you want to skip Dijkstra and go straight into A*, go [here](#).
+The most common method of solving this problem is with Dijkstra’s algorithm, and we will start off with this. If you want to skip Dijkstra and go straight into A*, go [here]({{site.baseurl}}/maze-solving-path-finding-and-satellite-navigation-part-2/).
 
 With that, lets take a look at a graph.
 
@@ -124,7 +124,7 @@ The connections B has is as follows. But since we are just coming from S, we ign
 
 ---
 
-Notice the B-A connection. Since the cost of getting to A from the start point is higher at 7 than going through B, we can update A with a lower cost of 5 (3 from B + 2 to B from S). We proceed with the other nodes connected to B, and we pop B out since there aren’t any connections left. Oof, now let’s speed this up. 
+Notice the B-A connection. Since the cost of getting to A from the start point is higher at 7 than going through B, we can update A with a lower cost of 5 (3 from B + 2 to B from S). We proceed with the other nodes connected to B, and we pop B out since there aren’t any connections left. Oof, now let’s speed this up.
 
 The next up is H or C. At first sight, it seems like it will take less time if it picks H since, the only node H is connected to is G, which is only connected to E right? Not quite. Remember how we are choosing the next row up in the priority queue? Since the shortest distance is 7 (yes, let’s cheat a little), you will have to exhaust all the other nodes that have a value under 7 in order for the algorithm to finish. Recall that we want to confirm that the path we have chosen is actually the shortest path, and we didn’t miss a path that was shorter. You can only confirm this if E rises to the top of the priority queue. If it is down below, the algorithm persists. So the first time you see E with a cost that is not infinite, the table will look something like this.
 

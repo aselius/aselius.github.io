@@ -17,7 +17,7 @@ After the past couple of failed attempts at a general blog at blogger, and a tec
 5. I am not trying to start a tech blog. This will have a lot of tech stuff in it, mind you, but will have a lot more than just the latest flavor of the month I’ve been crazy about. Hacker News or Medium is better for that.
 6. I may be opinionated and may from time to time fume about certain topics. But I mean, this is my personal blog. Refer to rule 2.
 7. It is **NOT polished**. Don’t complain too much about the delayed animation on the hamburger, the “ill” responsive design and what not. The intention here was create a simple static page with Jekyll. I’m not getting paid to design a scalable and responsive web app.
-8. The blog maybe broken from time to time as I play around with the template. Please keep that in mind.. I’m not trying to be unprofessional here, it’s just “Time is money, friend.” I don’t have enough time to keep this blog polished. Refer to rule 6.
+8. The blog maybe broken from time to time as I play around with the template. Please keep that in mind.. I’m not trying to be unprofessional here, it’s just “Time is money, friend.” I don’t have enough time to keep this blog polished. Refer to rule 7.
 
 ---
 
